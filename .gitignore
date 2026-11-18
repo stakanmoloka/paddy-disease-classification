@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
+
+# Data and trained artifacts: DVC metadata stays in Git
+/train_images/
+/test_images/
+/train.csv
+/sample_submission.csv
+/data/
+/models/
+/checkpoints/
+/artifacts/
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.engine
+
+# DVC local cache, state and credentials
+/.dvc/cache/
+/.dvc/local-remote/
+/.dvc/tmp/
+/.dvc/config.local
+
+# Run outputs
+/mlruns/
+/lightning_logs/

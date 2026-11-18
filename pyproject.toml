@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "paddy-doctor"
+version = "0.1.0"
+description = "Reproducible paddy leaf disease classification project"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "dvc>=3.60,<4",
+    "kaggle>=2.2.5",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1,<27",
+    "flake8>=7.2,<8",
+    "isort>=6.0,<8",
+    "pre-commit>=4.2,<5",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["paddy_doctor"]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.uv]
+package = true
